@@ -16,3 +16,6 @@ Thumbs.db
 
 # Node modules (if you ever add any JS tooling to your theme)
 node_modules/
+
+#Default WP themes
+themes/twenty*/
