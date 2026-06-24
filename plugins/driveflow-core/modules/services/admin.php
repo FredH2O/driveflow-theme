@@ -41,3 +41,14 @@ function driveflow_limit_services_to_six($post_ID, $post, $update)
 }
 
 add_action('wp_insert_post', 'driveflow_limit_services_to_six', 10, 3);
+
+function driveflow_service_permalink($post_link, $post)
+{
+    if ($post->post_type === 'service') {
+        return 'http://localhost:5173/#service-' . $post->post_name;
+    }
+
+    return $post_link;
+}
+
+add_filter('post_type_link', 'driveflow_service_permalink', 10, 2);

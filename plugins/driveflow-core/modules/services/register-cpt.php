@@ -19,7 +19,9 @@ function driveflow_register_services_cpt()
             'show_in_rest' => true,
             'rest_base' => 'services',
             'supports' => ['title', 'thumbnail'],
-            'rewrite' => ['slug' => 'services'],
+            'rewrite' => false,
+            'has_archive' => false,
+            'publicly_queryable' => true,
             'menu_icon' => 'dashicons-table-col-before',
         ]
     );
